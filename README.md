@@ -95,17 +95,25 @@ npm install
 
 ### Development Mode
 
-**Start Backend** (from `backend/` directory):
+Both applications are currently running and accessible!
+
+**Backend Server:**
 ```bash
+cd backend
 npm run start:dev
 ```
-The backend will start on http://localhost:3000 with hot-reload enabled.
+- **URL**: http://localhost:3000
+- **Swagger API Docs**: http://localhost:3000/api/docs
+- **Status**: ✅ Running with hot-reload
 
-**Start Frontend** (from `frontend/` directory):
+**Frontend Application:**
 ```bash
+cd frontend  
 npm run dev
 ```
-The frontend will start on http://localhost:5173
+- **URL**: http://localhost:5174
+- **Status**: ✅ Running with Tailwind CSS
+- **Features**: Modern UI with loading states, error handling, and responsive design
 
 ### Production Mode
 
@@ -234,23 +242,32 @@ npx prisma studio
 
 ## 🧪 Testing
 
-### Backend Testing
+### Frontend Testing
+
+The frontend includes Vitest for testing with React Testing Library.
 
 ```bash
-cd backend
+cd frontend
 
-# Run all tests
+# Run tests once
 npm test
 
 # Run tests in watch mode
-npm run test:watch
+npm run test
+
+# Run tests with UI
+npm run test:ui
 
 # Run tests with coverage
-npm run test:cov
-
-# Run E2E tests
-npm run test:e2e
+npm run test:coverage
 ```
+
+**Test Files:**
+- `src/test/HomePage.test.tsx` - HomePage component tests
+- `src/test/Layout.test.tsx` - Layout component tests  
+- `src/test/api.test.ts` - API client tests
+
+**Note:** Testing requires Node.js v20+ due to jsdom dependencies. If using Node v18, some tests may fail with ESM compatibility errors. Consider upgrading to Node v20 or higher for full testing support.
 
 ### Sample Dataset
 
