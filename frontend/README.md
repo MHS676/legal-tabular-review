@@ -18,3 +18,4 @@ Planned UI Modules
 - src/components/  Reusable UI components
 - src/services/    API clients and request helpers
 - src/state/       Client state management
+# product-management-client
